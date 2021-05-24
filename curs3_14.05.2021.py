@@ -48,3 +48,20 @@ my_list_string[1] = 'ccc'
 # tuple = tuple()
 # my_set_2.add(5)
 # print(my_set_2)
+HEADER = '\033[95m'
+OKBLUE = '\033[94m'
+OKCYAN = '\033[96m'
+OKGREEN = '\033[92m'
+WARNING = '\033[93m'
+FAIL = '\033[91m'
+ENDC = '\033[0m'
+BOLD = '\033[1m'
+UNDERLINE = '\033[4m'
+print(OKBLUE + 'test')
+from termcolor import colored
+print(colored('hello', 'red'), colored('world', 'green'))
+
+# word = 'alfabet'
+# word = 'A _ _ A _ _ T'
+# 7 incercari
+
