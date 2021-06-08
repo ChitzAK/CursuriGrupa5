@@ -88,3 +88,5 @@ def get_year_data(dataset, year='2019'):
     # {'2019': [('Romania', 84), ('Germany', 95), ..., ('Latvia', 85)]}
 
 get_year_data(main())
+
+

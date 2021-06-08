@@ -47,6 +47,24 @@ def nume_functie(a: int, b: int, c: int = 3) -> (int, int):
         # d = 2 - 2 - 2
     return a * b * c, a + b + c
 
+print(__name__)
+if __name__ == "__main__":
+    variabila1, variabila2 = nume_functie(2, b=3, c=4)
+    print(variabila1, variabila2)
 
-variabila1, variabila2 = nume_functie(2, b=3, c=4)
-print(variabila1, variabila2)
+def my_function(param_1, param_2, **kwargs):
+    print(kwargs)
+
+
+my_function(2, 5, a=-3, b=6, c='abc')
+
+def calculateSquare(n):
+    print(n)
+    return n*n
+
+
+numbers = (1, 2, 3, 4)
+result = map(calculateSquare, numbers)
+print(result)
+numbersSquare = set(result)
+print(numbersSquare)

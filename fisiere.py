@@ -13,9 +13,10 @@
 # with open('data.txt', 'w') as file:
 #     file.write("\nAna are mere \n Ionut e la piata \n povesti \n povesti cu zane")
 
-# with open('data.txt', 'r') as file:
-#     for line in file.readlines():
-#         print('linie', line)
+with open('data.txt', 'r') as file:
+    print(list(file))
+    # for line in file.readlines():
+    #     print('linie', line)
 
 # with open('data.txt', 'r') as file:
 #     # print(file)
