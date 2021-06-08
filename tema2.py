@@ -56,15 +56,11 @@ countries_list = {"AL": "Albania", "AT": "Austria", "BA": "Bosnia and Herzegovin
 def main():
     dict_of_values = {}
     for item in dataset:
-        # print(item)
-        # print(countries_list[item[0]])
         dict_of_values[countries_list[item[0]]] = []
         for i, v in enumerate(description[1]):
-            # print(i, v, item[1][i])
             dict_of_values[countries_list[item[0]]].append(
-                {'year': "".join(x for x in v if x.isdigit()), 'coverage': "".join(x for x in item[1][i] if x.isdigit())})
-        #     print(v, dataset)
-        # print(i, v, dataset[i][1])
+                {'year': "".join(x for x in v if x.isdigit()),
+                 'coverage': "".join(x for x in item[1][i] if x.isdigit())})
     return dict_of_values
 
 
@@ -76,17 +72,17 @@ def main():
 #              'year': '2018',
 #              'coverage': 67
 #          }]
-print(main())
+# print(main())
 
 def get_year_data(dataset, year='2019'):
-
-    # for value in dataset.values():
-    #     print(value[0]['year'])
-
-    return True
-
-    # {'2019': [('Romania', 84), ('Germany', 95), ..., ('Latvia', 85)]}
-
-get_year_data(main())
+    list_formatted = ["".join(x for x in year if x.isdigit()) for year in description[1]]
+    index = list_formatted.index(year)
+    dict_to_return = {
+        year: [(countries_list[line[0]], int("".join(x for x in line[1][index] if x.isdigit())) if "".join(
+            x for x in line[1][index] if x.isdigit()) != "" else '') for line in dataset]}
+    return dict_to_return
 
 
+exemplu = {'2019': [('Romania', 84), ('Germany', 95), ('Latvia', 85)]}
+
+print(get_year_data(dataset))
