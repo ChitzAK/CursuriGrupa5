@@ -84,5 +84,4 @@ def get_year_data(dataset, year='2019'):
 
 
 exemplu = {'2019': [('Romania', 84), ('Germany', 95), ('Latvia', 85)]}
-
 print(get_year_data(dataset))
