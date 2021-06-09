@@ -24,10 +24,10 @@
 # print(lista_duplicat)
 # a = 10
 # b = 20
-# # if a < b:
-# #     min = a
-# # else:
-# #     min = b
+# if a < b:
+#     min = a
+# else:
+#     min = b
 # min = a if a < b else b
 # print(min)
 
