@@ -83,5 +83,37 @@ def get_year_data(dataset, year='2019'):
     return dict_to_return
 
 
-exemplu = {'2019': [('Romania', 84), ('Germany', 95), ('Latvia', 85)]}
-print(get_year_data(dataset))
+
+
+# exemplu = {'2019': [('Romania', 84), ('Germany', 95), ('Latvia', 85)]}
+# print(get_year_data(dataset))
+
+# exemplu = {"Romania": [("2019", 84), ("2018", 86), ..., ("2011", 72)]}
+
+
+def get_country_data(dataset, country="Romania"):
+    dict_to_return = {country: []}
+    lista = []
+    for value in dataset[country]:
+        for item, dict_values in value.items():
+            if item == 'coverage':
+                value['coverage'] = int(dict_values)
+                lista.append(tuple(value.values()))
+        dict_to_return[country] = lista
+    return dict_to_return
+
+
+# print(get_country_data(main()))
+
+
+# perform_average(country_data['Romania']) => 79.4
+def perform_average(data):
+    media = 0
+    lista = [valori_lista[1] for item in data.values() for valori_lista in item]
+    # for item in data.values():
+    #     for valori_lista in item:
+    #         lista.append(valori_lista[1])
+    return sum(lista) / len(lista)
+
+print(perform_average(get_country_data(main())))
+
