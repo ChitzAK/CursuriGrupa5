@@ -74,6 +74,8 @@ df1 = df.drop_duplicates()
 print(df1.to_csv('test1.csv'))
 # print(df.corr())
 print(df.describe())
+
+print(df.mean())
 # df.plot(kind='scatter', x='AT', y='BE')
 # df.plot(kind='scatter', x='AT', y='BE')
 df['AT'].plot(kind='hist')
