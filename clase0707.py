@@ -94,7 +94,20 @@
 
 
 #
-# class Animale:
+class Joc:
+
+    def __init__(self):
+        self.name = 'john'
+
+
+class Jucator(Joc):
+
+    def __init__(self):
+        super().__init__()
+        self.prenume = 'ss'
+
+obj = Jucator()
+print(obj.name)
 #
 #     variabila2 = 1
 #     variabila1 = 5
